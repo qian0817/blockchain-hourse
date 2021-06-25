@@ -18,8 +18,6 @@ func WriteLedger(obj interface{}, stub shim.ChaincodeStubInterface, objectType s
 	}
 	// 序列化对象
 	bytes, err := json.Marshal(obj)
-	fmt.Println(key)
-	fmt.Println(string(bytes))
 	if err != nil {
 		return errors.New(fmt.Sprintf("%s-序列化json数据失败出错: %s", objectType, err))
 	}

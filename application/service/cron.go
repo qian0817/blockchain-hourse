@@ -12,7 +12,6 @@ import (
 )
 
 const spec = "0 0 0 * * ?" // 每天0点执行
-//const spec = "*/10 * * * * ?" //10秒执行一次，用于测试
 
 func Init() {
 	c := cron.New(cron.WithSeconds()) //支持到秒级别

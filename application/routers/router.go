@@ -17,7 +17,6 @@ func InitRouter() *gin.Engine {
 	//swagger文档
 	apiV1 := r.Group("/api/v1")
 	{
-		apiV1.GET("/hello", v1.Hello)
 		apiV1.POST("/login", v1.Login)
 		apiV1.POST("/register", v1.Register)
 		apiV1.POST("/changeBalance", v1.ChangeBalance)

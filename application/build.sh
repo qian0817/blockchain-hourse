@@ -11,12 +11,7 @@ docker rm -f blockchain-real-estate-application
 
 
 echo "二、开始打包编译"
-if [[ `uname` == 'Darwin' ]]; then
-  docker build -f  Dockerfile.Mac -t blockchain-real-estate-application:v1 .
-fi
-if [[ `uname` == 'Linux' ]]; then
-  docker build -f  Dockerfile.Linux -t blockchain-real-estate-application:v1 .
-fi
+docker build -f  Dockerfile -t blockchain-real-estate-application:v1 .
 
 echo "三、运行编译容器"
 docker run -it -d --name blockchain-real-estate-application blockchain-real-estate-application:v1
